@@ -1,0 +1,10 @@
+services:
+  mapreduce:
+    build: .
+    container_name: average-by-category
+    environment:
+      GROUP_BY_COLS: ${GROUP_BY_COLS:-2}   # 2 = categoria+subcategoria, 1 = solo categoria
+      STD_DDOF: ${STD_DDOF:-0}             # 0 = desviacion poblacional, 1 = muestral
+    volumes:
+      - ${INPUT_DIR:-./input}:/data/input:ro
+      - ./output:/data/output

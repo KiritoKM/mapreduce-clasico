@@ -1,0 +1,5 @@
+input_big/
+output/*
+!output/.gitkeep
+__pycache__/
+*.pyc

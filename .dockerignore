@@ -1,0 +1,6 @@
+input/
+input_big/
+output/
+__pycache__/
+*.pyc
+.git/
